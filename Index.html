@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avatar</title>
+  <style>
+    /* CSS styling for the avatar container */
+    #avatar {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%; /* Makes it round */
+      background-color: #00ff59; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 48px;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      cursor: pointer; /* Add cursor pointer to make it clickable */
+      transition: background-color 0.3s ease; /* Smooth transition */
+    }
+
+    /* CSS styling for hover effect */
+    #avatar:hover {
+      background-color: #1bae58; 
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Avatar container -->
+  <div id="avatar">Rita</div>
+
+  <!-- JavaScript -->
+  <script>
+    // Get the avatar element
+    var avatar = document.getElementById('avatar');
+
+    // Add an event listener for click event
+    avatar.addEventListener('click', function() {
+      // Generate a random letter (A-Z)
+      var randomLetter = String.fromCharCode(65 + Math.floor(Math.random() * 26));
+      
+      // Update the content of the avatar with the random letter
+      avatar.textContent = randomLetter;
+    });
+  </script>
+
+</body>
+</html>
